@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<script src='angular.min.js'></script>
+	<script src='app.js'></script>
+	<link rel='stylesheet' href='style.css'>
+</head>
+<body ng-app='myApp'>
+	<div ng-controller='myCtrl'>
+		<table ng-show='cart.length'>
+			<tr>
+				<th>Name</th>
+				<th>Unit Price</th>
+				<th>Quantity</th>
+				<th>Add/Reduce</th>
+				<th>Price</th>
+				<th>Remove</th>
+			</tr>
+			<tr ng-repeat='x in cart'>
+				<td>{{x.name}}</td>
+				<td>{{x.price}}</td>
+				<td>{{x.quantity}}</td>
+				<td><div class='btn'>
+						<button ng-click='add(x)'>+</button>
+						<button ng-click='reduce(x)'>-</button>
+					</div>
+				</td>
+				<td>{{x.price*x.quantity}}</td>
+				<td><button ng-click='remove(x)' class='dg-btn'>x</button></td>
+			</tr>
+			<tr class='tt-row'>
+				<td><button ng-click='cart=[]' id='clear'><b>Clear All !</b></button></td>
+				<td>Total Amount:</td>
+				<td>{{totalQuantity()}}</td>
+				<td>Total Price:</td>
+				<td>{{totalPrice()}}</td>
+				<td><button disabled id='confirm'>Confirm</button></td>
+			</tr>
+		</table>
+		<p ng-show='!cart.length' id='empt'>Your cart is empty !</p>
+	</div>
+</body>
+</html>

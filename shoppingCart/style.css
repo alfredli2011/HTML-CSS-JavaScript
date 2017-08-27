@@ -1,0 +1,44 @@
+table {
+	width: 90%;
+	margin: auto;
+	border: #a9a9a9 solid 2px;
+
+}
+th {
+	background-color: #00008b;
+	font-size: 1.2em;
+	text-align: center;
+	color: white;
+}
+tr {
+	background-color: #7fff00;
+}
+.tt-row,#empt {
+	background-color: #ffd700;
+	font-weight: bold;
+}
+.btn {
+	margin: auto;
+	text-align: center;
+}
+.btn button {
+	width: 40%;
+}
+.dg-btn {
+	width: 50%;
+	color: red;
+	display: block;
+	margin: auto;
+}
+#clear {
+	width: 100%;
+	color: red;
+}
+#confirm {
+	width: 100%;
+	color: #ffffff;
+	font-weight: bold;
+}
+#empt {
+	font-size: 1.6em;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Java Script Exam</title>
+		<link rel='stylesheet' link='text/css' href='jse.css'>
+	</head>
+	<body>
+		
+		<h1>Java Script Exam - Entry-Level (full score: 100)</h1><hr/>
+		<div class='question'>
+			<p><i>Q1:Inside which HTML element do we put the JavaScript?</i></p>
+			<input type='radio' name='q1' value='a'>A.&#60javascript&#62<br/>
+			<input type='radio' name='q1' value='b'>B.&#60scripting&#62<br/>
+			<input type='radio' name='q1' value='c'>C.&#60script&#62<br/>
+			<input type='radio' name='q1' value='d'>D.&#60js&#62<br/>
+		</div>
+		<div class='question'>
+			<p><i>Q2:What is the correct JavaScript syntax to change the content of the HTML element below?<br/>
+			&#60p id="demo"&#62This is a demonstration.&#60/p&#62</i></p>
+			<input type='radio' name='q2' value='a'>A.document.getElementByName("p").innerHTML = "Hello World!";<br/>
+			<input type='radio' name='q2' value='b'>B.document.getElementById("demo").innerHTML = "Hello World!";<br/>
+			<input type='radio' name='q2' value='c'>C.#demo.innerHTML = "Hello World!";<br/>
+			<input type='radio' name='q2' value='d'>D.document.getElement("p").innerHTML = "Hello World!";<br/>
+		</div>
+		<div class='question'>
+			<p><i>Q3:Where is the correct place to insert a JavaScript??</i></p>
+			<input type='radio' name='q3' value='a'>A.The &#60head&#62 section<br/>
+			<input type='radio' name='q3' value='b'>B.Both the &#60head&#62 section and the &#60body&#62 section are correct<br/>
+			<input type='radio' name='q3' value='c'>C.The &#60body&#62 section<br/>
+		</div>
+		<div class='question'>		
+			<p><i>Q4:What is the correct syntax for referring to an external script called "xxx.js"?</i></p>
+			<input type='radio' name='q4' value='a'>A.&#60script name="xxx.js"&#62<br/>
+			<input type='radio' name='q4' value='b'>B.&#60script href="xxx.js"&#62<br/>
+			<input type='radio' name='q4' value='c'>C.&#60script src="xxx.js"&#62<br/>
+			<input type='radio' name='q4' value='d'>D.&#60script link="xxx.js"&#62<br/>
+		</div>
+		<div class='question'>
+			<p><i>Q5:The external JavaScript file must contain the &#60script&#62 tag.?</i></p>
+			<input type='radio' name='q5' value='a'>A.False<br/>
+			<input type='radio' name='q5' value='b'>B.True<br/>
+		</div>
+		<div class='question'>
+			<p><i>Q6:How do you write "Hello World" in an alert box?</i></p>
+			<input type='radio' name='q6' value='a'>A.msg("Hello World");<br/>
+			<input type='radio' name='q6' value='b'>B.alertBox("Hello World");<br/>
+			<input type='radio' name='q6' value='c'>C.msgBox("Hello World");<br/>
+			<input type='radio' name='q6' value='d'>D.alert("Hello World");<br/>
+		</div>
+		<div class='question'>
+			<p><i>Q7:How do you create a function in JavaScript?</i></p>
+			<input type='radio' name='q7' value='a'>A.function = myFunction()<br/>
+			<input type='radio' name='q7' value='b'>B.function myFunction()<br/>
+			<input type='radio' name='q7' value='c'>C.function:myFunction()<br/>
+		</div>
+		<div class='question'>
+			<p><i>Q8:How do you call a function named "myFunction"?</i></p>
+			<input type='radio' name='q8' value='a'>A.myFunction()<br/>
+			<input type='radio' name='q8' value='b'>B.call function myFunction()<br/>
+			<input type='radio' name='q8' value='c'>C.call myFunction()<br/>
+			<input type='radio' name='q8' value='d'>D.myFunction.call()<br/>
+		</div>
+		<div class='question'>
+			<p><i>Q9:How to write an IF statement in JavaScript?</i></p>
+			<input type='radio' name='q9' value='a'>A.if i = 5 then<br/>
+			<input type='radio' name='q9' value='b'>B.if i == 5 then<br/>
+			<input type='radio' name='q9' value='c'>C.if i = 5<br/>
+			<input type='radio' name='q9' value='d'>D.if (i == 5)<br/>
+		</div>
+		<div class='question'>
+			<p><i>Q10:How does a WHILE loop start?</i></p>
+			<input type='radio' name='q10' value='a'>A.while i = 1 to 10<br/>
+			<input type='radio' name='q10' value='b'>B.while (i <= 10; i++)<br/>
+			<input type='radio' name='q10' value='c'>C.while (i <= 10)<br/>
+			<input type='radio' name='q10' value='d'>D.while (i=1:10)<br/>
+		</div>
+			<hr/>
+			<button onclick='submitAns()'>Submit</button>
+			<pre id='info'>Draw by Yao  --  on Jun 14th, 2017</pre>
+	</body>
+
+	<script type='text/javascript'>
+	function submitAns(){
+		var qus=["q1","q2","q3","q4","q5","q6","q7","q8","q9","q10"];
+		var ans=["c","b","b","c","a","d","b","a","d","c"];
+		var score=0;;
+		try{
+			for(var i=0;i<qus.length;i++){
+				if(document.querySelector('input[name='+qus[i]+']:checked').value==ans[i]){
+					score+=100/qus.length;
+				}
+			}
+			window.alert("Your score is "+score+".");
+			location.reload();
+		}catch(err){
+				window.alert("You haven't finished question"+(i+1)+"!");
+		}	
+	}
+	</script>
+
+</html>
